@@ -1,0 +1,42 @@
+#website-header {
+    font-size: xx-large;
+    font-style: italic;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: gray;
+    border-style: solid;
+    background-color: lightblue;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+div.nav {
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+    width: 800px;
+    height: 25px;
+    background-color: lightgray;
+    position: relative;
+    left: 0px;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: lightgray;
+    right: 0px;
+}

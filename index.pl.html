@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="vieport" content="">
+        <title>Strona główna | Słownik Języków Wymierających</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="langs.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="website-header">Słownik Języków Wymierających</h1>
+            <div class="nav">
+                <nav class="nav-header">
+                <a href="/home.pl.html">Strona główna</a>&nbsp;
+                |&nbsp;<a href="/search.pl.html">Wyszukaj</a>&nbsp;
+                |&nbsp;<a href="/about.pl.html">O stronie</a>&nbsp;
+                |&nbsp;Wybierz język:&nbsp;
+                <select name="langs" title="Wybierz język">
+                    <option value="pl">Polski</option>
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                    <option value="es">Español</option>
+                </select>&nbsp;
+                <button type="submit" id="lang-submit" onclick="change_lang();">Zatwierdź</button>
+                </nav>
+            </div>
+        </header>
+    </body>
+</html>
