@@ -58,12 +58,12 @@
         <h4><strong>Wyniki wyszukiwania:</strong></h4>
         <div id="search-results"></div>
         <script>
-            document.querySelector("#search").onsubmit = function(ev) {
-                ev.preventDefault();
+            //document.querySelector("#search").onsubmit = function(ev) {
+             //   ev.preventDefault();
                 const urlQuery = new URLSearchParams(window.location.search);
                 console.log(urlQuery);
-                // var results = searchWithLevenshteinDist(urlQuery.get("text"), urlQuery.get("elasticity"), urlQuery.get("dictionary"));
-                var results = searchWithLevenshteinDist(document.querySelector("#query-text"), document.querySelector("#query-elasticity"), document.querySelector("#query-dictionary"));
+                var results = searchWithLevenshteinDist(urlQuery.get("text"), urlQuery.get("elasticity"), urlQuery.get("dictionary"));
+                //var results = searchWithLevenshteinDist(document.querySelector("#query-text"), document.querySelector("#query-elasticity"), document.querySelector("#query-dictionary"));
                 var resultsContainer = document.querySelector("#search-results");
                 while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
                 if(!results) {
@@ -79,7 +79,7 @@
                         resultsContainer.appendChild(wordEntry);
                     }
                 }
-            };
+            //};
         </script>
     </body>
 </html>
