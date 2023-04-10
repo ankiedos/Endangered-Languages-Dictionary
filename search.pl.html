@@ -57,7 +57,7 @@
         <div id="search-results"></div>
         <script>
             document.querySelector("#search").onsubmit = function(ev) {
-                e.preventDefault();
+                ev.preventDefault();
                 var results = searchWithLevenshteinDist(document.querySelector("#query-text").value, document.querySelector("#query-elasticity").value, document.querySelector("#query-dictionary"));
                 var resultsContainer = document.querySelector("#search-results");
                 while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
