@@ -70,7 +70,7 @@
                     resultsContainer.appendChild(document.createTextNode("Nie udało się znaleźć nic, co pasowałoby do wyszukiwanej frazy."));
                 }
                 else {
-                    for(var res in results) {
+                    for(var res of results) {
                         console.log("Listing a word entry: " + res + "\n");
                         var wordEntry = document.createElement("a");
                         wordEntry.className = "search-result";
