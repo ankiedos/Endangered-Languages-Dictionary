@@ -55,21 +55,27 @@
             </select>
             <button type="submit" id="query-submit">Wyszukaj</button> 
         </form>
-        <div id="search-results"></div>
+        <div id="search-results"><h4><strong>Wyniki wyszukiwania:</strong></h4></div>
         <script>
             document.querySelector("#search").onsubmit = function(ev) {
                 ev.preventDefault();
                 const urlQuery = new URLSearchParams(window.location.search);
+                console.log(urlQuery);
                 var results = searchWithLevenshteinDist(urlQuery.get("query-text"), urlQuery.get("query-elasticity"), urlQuery.get("query-dictionary"));
                 var resultsContainer = document.querySelector("#search-results");
                 while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
-                for(var res in results) {
-                    console.log("Listing a word entry: " + res + "\n");
-                    var wordEntry = document.createElement("a");
-                    wordEntry.className = "search-result";
-                    wordEntry.href = "/Endangered-Languages-Dictionary/entry.html?q=" + res;
-                    wordEntry.appendChild(document.createTextNode(res));
-                    resultsContainer.appendChild(wordEntry);
+                if(!results) {
+                    resultsContainer.appendChild(document.createTextNode("Nie udało się znaleźć nic, co pasowałoby do wyszukiwanej frazy."));
+                }
+                else {
+                    for(var res in results) {
+                        console.log("Listing a word entry: " + res + "\n");
+                        var wordEntry = document.createElement("a");
+                        wordEntry.className = "search-result";
+                        wordEntry.href = "/Endangered-Languages-Dictionary/entry.html?q=" + res;
+                        wordEntry.appendChild(document.createTextNode(res));
+                        resultsContainer.appendChild(wordEntry);
+                    }
                 }
             };
         </script>
