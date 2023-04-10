@@ -38,7 +38,7 @@ div.nav {
     min-width: 300px;
 }
 
-header {
+div.header {
     position: absolute;
     top: 0px;
     left: 0px;
