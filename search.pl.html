@@ -32,7 +32,7 @@
             <input type="number" id="query-elasticity" name="elasticity" min="0" max="10" value="2" />
             <input type="text" id="query-text" name="text" placeholder="Wpisz szukany tekst" />
             <select name="query-dictionary" title="Wybierz słownik">
-                <optgroup label="Kaszubski (Kaszëbszczi)">
+                <optgroup label="Kaszubski (Kaszëbsczi)">
                     <option value="pl_ksb">Polski - Kaszubski (Kaszëbsczi)</option>
                     <option value="csb_pl">Kaszubski (Kaszëbsczi) - Polski</option>
                 </optgroup>
@@ -59,7 +59,8 @@
         <script>
             document.querySelector("#search").onsubmit = function(ev) {
                 ev.preventDefault();
-                var results = searchWithLevenshteinDist(document.querySelector("#query-text").value, document.querySelector("#query-elasticity").value, document.querySelector("#query-dictionary"));
+                const urlQuery = new URLSearchParams(window.location.search);
+                var results = searchWithLevenshteinDist(urlQuery.get("query-text"), urQuery.get("query-elasticity"), urlQuery.get("query-dictionary"));
                 var resultsContainer = document.querySelector("#search-results");
                 while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
                 for(var res in results) {
