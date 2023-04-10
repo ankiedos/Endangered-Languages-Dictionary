@@ -33,6 +33,11 @@ div.nav {
     left: 0px;
 }
 
+.index-choose-language {
+    min-height: 100px;
+    min-width: 300px;
+}
+
 header {
     position: absolute;
     top: 0px;
