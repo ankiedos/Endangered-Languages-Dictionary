@@ -49,13 +49,14 @@
                     <option value="wym_pl">Wilamowski (Wymysiöeryś) - Polski</option>
                 </optgroup>
                 <optgroup label="Rusiński">
-                    <option value="pl_rue">Polski - Ruśiński</option>
-                    <option value="rue_pl">Ruśiński - Polski</option>
+                    <option value="pl_rue">Polski - Rusiński</option>
+                    <option value="rue_pl">Rusiński - Polski</option>
                 </optgroup>
             </select>
             <button type="submit" id="query-submit">Wyszukaj</button> 
         </form>
-        <div id="search-results"><h4><strong>Wyniki wyszukiwania:</strong></h4></div>
+        <h4><strong>Wyniki wyszukiwania:</strong></h4>
+        <div id="search-results"></div>
         <script>
             document.querySelector("#search").onsubmit = function(ev) {
                 ev.preventDefault();
