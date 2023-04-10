@@ -60,7 +60,7 @@
             document.querySelector("#search").onsubmit = function(ev) {
                 ev.preventDefault();
                 const urlQuery = new URLSearchParams(window.location.search);
-                var results = searchWithLevenshteinDist(urlQuery.get("query-text"), urQuery.get("query-elasticity"), urlQuery.get("query-dictionary"));
+                var results = searchWithLevenshteinDist(urlQuery.get("query-text"), urlQuery.get("query-elasticity"), urlQuery.get("query-dictionary"));
                 var resultsContainer = document.querySelector("#search-results");
                 while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
                 for(var res in results) {
