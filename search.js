@@ -104,7 +104,10 @@ const levenshtein = (function () {
 function searchWithLevenshteinDist(query, dist, dictionary) {
     var results = [];
     for(var elem in dictionaries[dictionary]) {
-        if(levenshtein(query, elem["word"]) <= dist) results.push(elem["word"]);
+        if(levenshtein(query, elem["word"]) <= dist) {
+          results.push(elem["word"]);
+          console.log("Found a result: " + elem["word"]);
+        }
     }
     return results;
 }

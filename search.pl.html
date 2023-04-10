@@ -62,6 +62,7 @@
                 var resultsContainer = document.querySelector("#search-results");
                 while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
                 for(var res in results) {
+                    console.log("Listing a word entry: " + res + "\n");
                     var wordEntry = document.createElement("a");
                     wordEntry.className = "search-result";
                     wordEntry.href = "/Endangered-Languages-Dictionary/entry.html?q=" + res;
