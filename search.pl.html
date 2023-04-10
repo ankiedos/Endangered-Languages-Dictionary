@@ -27,48 +27,50 @@
                 </nav>
             </div>
         </header>
-        <form id="search">
-            <input type="number" id="query-elasticity" name="elasticity" min="0" max="10" value="2" />
-            <input type="text" id="query-text" name="text" placeholder="Wpisz szukany tekst" />
-            <select name="query-dictionary" title="Wybierz słownik">
-                <optgroup label="Kaszubski (Kaszëbszczi)">
-                    <option value="pl-kaszubski">Polski - Kaszubski (Kaszëbszczi)</option>
-                    <option value="kaszubski-pl">Kaszubski (Kaszëbszczi) - Polski</option>
-                </optgroup>
-                <optgroup label="Dolnołużycki (Dolnoserbski)">
-                    <option value="pl-dsb">Polski - Dolnołużycki (Dolnoserbski)</option>
-                    <option value="dsb-pl">Dolnołużycki (Dolnoserbski) - Polski</option>
-                </optgroup>
-                <optgroup label="Górnołużycki (Hornjoserbsce)">
-                    <option value="pl-hsb">Polski - Górnołużycki (Hornjoserbsce) </option>
-                    <option value="hsb-pl">Górnołużycki (Hornjoserbsce) - Polski</option>
-                </optgroup>
-                <optgroup label="Wilamowski (Wymysiöryś)">
-                    <option value="pl-wym">Polski - Wilamowski (Wymysiöryś)</option>
-                    <option value="wym-pl">Wilamowski (Wymysiöryś) - Polski</option>
-                </optgroup>
-                <optgroup label="Rusiński">
-                    <option value="pl-rusinski">Polski - Ruśiński</option>
-                    <option value="rusinski-pl">Ruśiński - Polski</option>
-                </optgroup>
-            </select>
-            <button type="submit" id="query-submit">Wyszukaj</button> 
-        </form>
-        <div id="search-results"></div>
-        <script>
-            document.querySelector("#search").onsubmit = function(ev) {
-                e.preventDefault();
-                var results = searchWithLevenshteinDist(document.querySelector("#query-text").value, document.querySelector("#query-elasticity").value, document.querySelector("#query-dictionary"));
-                var resultsContainer = document.querySelector("#search-results");
-                while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
-                for(var res in results) {
-                    var wordEntry = document.createElement("a");
-                    wordEntry.className = "search-result";
-                    wordEntry.href = "/Endangered-Languages-Dictionary/entry.html?q=" + res;
-                    wordEntry.appendChild(document.createTextNode(res));
-                    resultsContainer.appendChild(wordEntry);
-                }
-            };
-        </script>
+        <main>
+            <form id="search">
+                <input type="number" id="query-elasticity" name="elasticity" min="0" max="10" value="2" />
+                <input type="text" id="query-text" name="text" placeholder="Wpisz szukany tekst" />
+                <select name="query-dictionary" title="Wybierz słownik">
+                    <optgroup label="Kaszubski (Kaszëbszczi)">
+                        <option value="pl-kaszubski">Polski - Kaszubski (Kaszëbszczi)</option>
+                        <option value="kaszubski-pl">Kaszubski (Kaszëbszczi) - Polski</option>
+                    </optgroup>
+                    <optgroup label="Dolnołużycki (Dolnoserbski)">
+                        <option value="pl-dsb">Polski - Dolnołużycki (Dolnoserbski)</option>
+                        <option value="dsb-pl">Dolnołużycki (Dolnoserbski) - Polski</option>
+                    </optgroup>
+                    <optgroup label="Górnołużycki (Hornjoserbsce)">
+                        <option value="pl-hsb">Polski - Górnołużycki (Hornjoserbsce) </option>
+                        <option value="hsb-pl">Górnołużycki (Hornjoserbsce) - Polski</option>
+                    </optgroup>
+                    <optgroup label="Wilamowski (Wymysiöryś)">
+                        <option value="pl-wym">Polski - Wilamowski (Wymysiöryś)</option>
+                        <option value="wym-pl">Wilamowski (Wymysiöryś) - Polski</option>
+                    </optgroup>
+                    <optgroup label="Rusiński">
+                        <option value="pl-rusinski">Polski - Ruśiński</option>
+                        <option value="rusinski-pl">Ruśiński - Polski</option>
+                    </optgroup>
+                </select>
+                <button type="submit" id="query-submit">Wyszukaj</button> 
+            </form>
+            <div id="search-results"></div>
+            <script>
+                document.querySelector("#search").onsubmit = function(ev) {
+                    e.preventDefault();
+                    var results = searchWithLevenshteinDist(document.querySelector("#query-text").value, document.querySelector("#query-elasticity").value, document.querySelector("#query-dictionary"));
+                    var resultsContainer = document.querySelector("#search-results");
+                    while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
+                    for(var res in results) {
+                        var wordEntry = document.createElement("a");
+                        wordEntry.className = "search-result";
+                        wordEntry.href = "/Endangered-Languages-Dictionary/entry.html?q=" + res;
+                        wordEntry.appendChild(document.createTextNode(res));
+                        resultsContainer.appendChild(wordEntry);
+                    }
+                };
+            </script>
+        </main>
     </body>
 </html>
