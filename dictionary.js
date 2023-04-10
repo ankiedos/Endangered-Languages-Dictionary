@@ -1,5 +1,5 @@
 var dictionaries = {
-    pl_csb = [
+    pl_csb: [
         {word: "język", translation: "testing testing", synonyms: [], related: [], pronounciation: "[]"}
     ],
 };
