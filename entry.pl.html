@@ -55,7 +55,7 @@
             </select>
             <button type="submit" id="query-submit">Wyszukaj</button> 
         </form>
-        <h4><strong>Hasło: </strong></h4>
+        <strong>Hasło: </strong><br>
         <div id="phrase"></div>
         <strong>tłumaczenia</strong>
         <ul id="translations"></ul>
@@ -82,6 +82,7 @@
             var phrase = URLQuery.get("q");
             var dict = URLQuery.get("dict");
             var entry = dictionaries[dict].find(obj => obj.phrase == phrase);
+            console.log(entry);
             var phraseDiv = document.querySelector("#phrase");
             phraseDiv.appendChild(document.createTextNode(phrase));
 
@@ -109,7 +110,7 @@
             var antonymsSpan = document.querySelector("#antonyms");
             var hyponymsSpan = document.querySelector("#hyponyms");
             var hyperonymsSpan = document.querySelector("#hyperonyms");
-            if(entry.pos[0] == "S") { // S like substance (a noun or an adjective)
+            if(entry.pos[0] == "S") { // 'S' like 'substance' (a noun or an adjective)
                 if(entry.hyponyms.length > 0) {
                     for(var hyp = 0; i < entry.hyponyms.length - 1; i++) {
                         var a = document.createElement("a");
