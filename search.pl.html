@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="vieport" content="">
-        <title>Wyszukaj | Słownik Języków Wymierających</title>
+        <title>Wyszukaj | Słownik Języków Zagrożonych Wymarciem</title>
         <link rel="stylesheet" href="/Endangered-Languages-Dictionary/styles.css">
         <script src="/Endangered-Languages-Dictionary/dictionary.js"></script>
         <script src="/Endangered-Languages-Dictionary/langs.js"></script>
@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="header">
-            <h1 id="website-header">Słownik Języków Wymierających</h1>
+            <h1 id="website-header">Słownik Języków Zagrożonych Wymarciem</h1>
             <div class="nav">
                 <nav class="nav-header">
                 <a href="/Endangered-Languages-Dictionary/index.pl.html">Strona główna</a>&nbsp;
@@ -83,7 +83,7 @@
             var results = searchWithLevenshteinDist(URLQuery.get("text"), URLQuery.get("elasticity"), URLQuery.get("dictionary"));
             var resultsContainer = document.querySelector("#search-results");
             while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
-            if(!results) {
+            if(!results.res) {
                 resultsContainer.appendChild(document.createTextNode("Nie udało się znaleźć nic, co pasowałoby do wyszukiwanej frazy."));
             }
             else {

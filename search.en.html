@@ -83,7 +83,7 @@
             var results = searchWithLevenshteinDist(URLQuery.get("text"), URLQuery.get("elasticity"), URLQuery.get("dictionary"));
             var resultsContainer = document.querySelector("#search-results");
             while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
-            if(!results) {
+            if(!results.res) {
                 resultsContainer.appendChild(document.createTextNode("Could not find anything matching searched phrase."));
             }
             else {
