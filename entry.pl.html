@@ -98,8 +98,8 @@
 
             var UPASpan = document.querySelector("#UPA");
             if(entry.pronounciation.UPA.length == 0) {
-                UPASpan.removeChildr(UPASpan.lastChild);
-                UPASpan.removeChildr(UPASpan.lastChild);
+                UPASpan.removeChild(UPASpan.lastChild);
+                UPASpan.removeChild(UPASpan.lastChild);
             }
             else UPASpan.appendChild(document.createTextNode(entry.pronounciation.UPA));
 
