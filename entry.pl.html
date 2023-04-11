@@ -80,7 +80,7 @@
             const URLQuery = new URLSearchParams(window.location.search);
             console.log(URLQuery);
             if(URLQuery.has("elasticity")) {
-                window.location.search = "https://ankiedos.github.io/Endangered-Languages-Dictionary/search.pl.html?elasticity=" + URLQuery.get("elasticity") + "&text=" + URLQuery.get("text") + "&dictionary=" + URLQuery.get("dictionary");
+                window.location.replace("https://ankiedos.github.io/Endangered-Languages-Dictionary/search.pl.html?elasticity=" + URLQuery.get("elasticity") + "&text=" + URLQuery.get("text") + "&dictionary=" + URLQuery.get("dictionary"));
             }
             else {
                 var phrase = URLQuery.get("q");
