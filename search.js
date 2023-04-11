@@ -110,6 +110,7 @@ function searchWithLevenshteinDist(query, dist, dictionary) {
           console.log("Found a result: " + elem.phrase + "\n");
         }
     }
+    console.log("searchWithLevenshteinDist(): dictionary = " + dictionary + "\n");
     return {dict: dictionary, res: results};
 }
 
