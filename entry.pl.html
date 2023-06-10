@@ -87,12 +87,15 @@
                 var dict = URLQuery.get("dict");
                 var entry = dictionaries[dict].find(obj => obj.phrase == phrase);
                 console.log(entry);
+                // phrase
                 var phraseDiv = document.querySelector("#phrase");
                 phraseDiv.appendChild(document.createTextNode(phrase));
 
+                // IPA
                 var IPASpan = document.querySelector("#IPA");
                 IPASpan.appendChild(document.createTextNode(entry.pronounciation.IPA));
 
+                // SPA
                 var SPASpan = document.querySelector("#SPA");
                 if(entry.pronounciation.SPA.length == 0) {
                     SPASpan.removeChild(SPASpan.lastChild);
@@ -100,6 +103,7 @@
                 }
                 else SPASpan.appendChild(document.createTextNode(entry.pronounciation.SPA));
 
+                // UPA
                 var UPASpan = document.querySelector("#UPA");
                 if(entry.pronounciation.UPA.length == 0) {
                     UPASpan.removeChild(UPASpan.lastChild);
@@ -107,16 +111,43 @@
                 }
                 else UPASpan.appendChild(document.createTextNode(entry.pronounciation.UPA));
 
+                // Kirschenbaum
                 var KirschenbaumSpan = document.querySelector("#Kirschenbaum");
                 KirschenbaumSpan.appendChild(document.createTextNode(entry.pronounciation.Kirschenbaum));
 
+                // translations
                 var translationsList = document.querySelector("#translations");
+                for(var trans = 0; trans < entry.translations.length; trans++) {
+                    var li = document.createElement("li");
+                    var a = document.createElement("a");
+                    a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.translations[trans] + "&dict=" + dict;
+                    a.appendChild(document.createTextNode(entry.translations[trans]));
+                    li.appendChild(a);
+                    translationsList.appendChild(li);
+                }
                 var antonymsSpan = document.querySelector("#antonyms");
                 var hyponymsSpan = document.querySelector("#hyponyms");
                 var hyperonymsSpan = document.querySelector("#hyperonyms");
                 if(entry.pos[0] == "S") { // 'S' like 'substance' (a noun or an adjective)
+                    // antonyms
+                    if(entry.antonyms.length > 0) {
+                        for(var ant = 0; ant < entry.antonyms.length - 1; ant++) {
+                            var a = document.createElement("a");
+                            a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.antonyms[ant] + "&dict=" + dict;
+                            a.appendChild(document.createTextNode(entry.antonyms[ant]));
+                            antonymsSpan.appendChild(a);
+                            antonymsSpan.appendChild(document.createTextNode(", "));
+                        }
+                        var a = document.createElement("a");
+                        a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.antonyms[entry.antonyms.length - 1] + "&dict=" + dict;
+                        a.appendChild(document.createTextNode(entry.antonyms[entry.antonyms.length - 1]));
+                        antonymsSpan.appendChild(a);
+                    }
+                    else antonymsSpan.appendChild(document.createTextNode("brak"));
+
+                    // hyponyms
                     if(entry.hyponyms.length > 0) {
-                        for(var hyp = 0; i < entry.hyponyms.length - 1; i++) {
+                        for(var hyp = 0; hyp < entry.hyponyms.length - 1; hyp++) {
                             var a = document.createElement("a");
                             a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.hyponyms[hyp] + "&dict=" + dict;
                             a.appendChild(document.createTextNode(entry.hyponyms[hyp]));
@@ -128,8 +159,11 @@
                         a.appendChild(document.createTextNode(entry.hyponyms[entry.hyponyms.length - 1]));
                         hyponymsSpan.appendChild(a);
                     }
+                    else hyponymsSpan.appendChild(document.createTextNode("brak"));
+
+                    // hyperonyms
                     if(entry.hyperonyms.length > 0) {
-                        for(var hyper = 0; i < entry.hyperonyms.length - 1; i++) {
+                        for(var hyper = 0; hyper < entry.hyperonyms.length - 1; hyper++) {
                             var a = document.createElement("a");
                             a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.hyperonyms[hyper] + "&dict=" + dict;
                             a.appendChild(document.createTextNode(entry.hyperonyms[hyper]));
@@ -141,11 +175,40 @@
                         a.appendChild(document.createTextNode(entry.hyperonyms[entry.hyperonyms.length - 1]));
                         hyperonymsSpan.appendChild(a);
                     }
+                    else hyperonymsSpan.appendChild(document.createTextNode("brak"));
                 }
+
+                // related
                 var relatedSpan = document.querySelector("#related");
+                if(entry.related.length > 0) {
+                    for(var rel = 0; rel < entry.related.length - 1; rel++) {
+                        var a = document.createElement("a");
+                        a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.related[rel] + "&dict=" + dict;
+                        a.appendChild(document.createTextNode(entry.related[rel]));
+                        relatedSpan.appendChild(a);
+                        relatedSpan.appendChild(document.createTextNode(", "));
+                    }
+                    var a = document.createElement("a");
+                    a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.related[entry.related.length - 1] + "&dict=" + dict;
+                    a.appendChild(document.createTextNode(entry.related[entry.related.length - 1]));
+                    relatedSpan.appendChild(a);
+                }
+                else relatedSpan.appendChild(document.createTextNode("brak"));
+
+                // Part of Speech
                 var posSpan = document.querySelector("#part-of-speech").querySelector("em");
                 posSpan.appendChild(document.createTextNode(entry.pos[0] == 'S' ? entry.pos.substring(1) : entry.pos));
+
+                // example sentences
                 var sentencesList = document.querySelector("#sentences");
+                if(entry.sentences.length > 0) {
+                    for(var sent = 0; sent < entry.sentences.length; sent++) {
+                        var li = document.createElement("li");
+                        li.appendChild(document.createTextNode(entry.sentences[sent]));
+                        sentencesList.appendChild(li);
+                    }
+                }
+                else sentencesList.appendChild(document.createElement("li").appendChild(document.createTextNode("brak")));
             }
         </script>
     </body>
