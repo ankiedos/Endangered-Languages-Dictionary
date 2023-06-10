@@ -2,14 +2,16 @@ function changeLang(current)
 {
     var select = document.querySelector("select[name=langs]");
     if(select.value != "pl" && select.value != "en") window.location.pathname = "/Endangered-Languages-Dictionary/lack-of-translation." + current + ".html";
-    var URL = window.location.pathname;
-    if(window.location.href == "https://ankiedos.github.io/Endangered-Languages-Dictionary/") window.location.href = "https://ankiedos.github.io/Endangered-Languages-Dictionary/index." + select.value + ".html";
     else {
-        var start = URL.lastIndexOf(current);
-        var first = URL.substring(0, start);
-        var middle = select.value;
-        var last = URL.substring(start+current.length);
-        window.location.pathname = first + middle + last;
+        var URL = window.location.pathname;
+        if(window.location.href == "https://ankiedos.github.io/Endangered-Languages-Dictionary/") window.location.href = "https://ankiedos.github.io/Endangered-Languages-Dictionary/index." + select.value + ".html";
+        else {
+            var start = URL.lastIndexOf(current);
+            var first = URL.substring(0, start);
+            var middle = select.value;
+            var last = URL.substring(start+current.length);
+            window.location.pathname = first + middle + last;
+        }
     }
 }
 function translatePOS(pos, lang) {
