@@ -177,6 +177,11 @@
                     }
                     else hyperonymsSpan.appendChild(document.createTextNode("brak"));
                 }
+                else {
+                    antonymsSpan.appendChild(document.createTextNode("brak"));
+                    hyponymsSpan.appendChild(document.createTextNode("brak"));
+                    hyperonymsSpan.appendChild(document.createTextNode("brak"));
+                }
 
                 // related
                 var relatedSpan = document.querySelector("#related");
