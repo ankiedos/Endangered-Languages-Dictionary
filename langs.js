@@ -1,9 +1,15 @@
-function changeLang()
+function changeLang(current)
 {
     var select = document.querySelector("select[name=langs]");
     var URL = window.location.pathname;
     if(window.location.href == "https://ankiedos.github.io/Endangered-Languages-Dictionary/") window.location.href = "https://ankiedos.github.io/Endangered-Languages-Dictionary/index." + select.value + ".html";
-    else window.location.pathname = URL.replace(URL.substring(URL.lastIndexOf('.', URL.length - 6) + 1, URL.lastIndexOf('.')), select.value);
+    else {
+        var start = URL.lastIndexOf(current);
+        var first = URL.substring(0, start);
+        var middle = select.value;
+        var last = URL.substring(start+current.length);
+        window.location.pathname = first + middle + last;
+    }
 }
 function translatePOS(pos, lang) {
     switch(lang) {
