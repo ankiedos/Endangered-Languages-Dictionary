@@ -90,7 +90,7 @@
             else {
                 var results = searchWithLevenshteinDist(URLQuery.get("text"), URLQuery.get("elasticity"), URLQuery.get("dictionary"));
                 while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
-                if(!results.res) {
+                if(results.res.length == 0) {
                     resultsContainer.appendChild(document.createTextNode("Could not find anything matching searched phrase."));
                 }
                 else {
