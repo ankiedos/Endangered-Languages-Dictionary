@@ -1,4 +1,4 @@
-function change_lang()
+function changeLang()
 {
     var select = document.querySelector("select[name=langs]");
     var URL = window.location.href;

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="vieport" content="">
-        <title>Hasło | Słownik Języków Zagrożonych Wymarciem</title>
+        <title>Entry | Endangered Languages Dictionary</title>
         <link rel="stylesheet" href="/Endangered-Languages-Dictionary/styles.css">
         <script src="/Endangered-Languages-Dictionary/dictionary.js"></script>
         <script src="/Endangered-Languages-Dictionary/langs.js"></script>
@@ -11,20 +11,20 @@
     </head>
     <body>
         <div class="header">
-            <h1 id="website-header">Słownik Języków Zagrożonych Wymarciem</h1>
+            <h1 id="website-header">Endangered Languages Dictionary</h1>
             <div class="nav">
                 <nav class="nav-header">
-                <a href="/Endangered-Languages-Dictionary/index.pl.html">Strona główna</a>&nbsp;
-                |&nbsp;<a href="/Endangered-Languages-Dictionary/search.pl.html">Wyszukaj</a>&nbsp;
-                |&nbsp;<a href="/Endangered-Languages-Dictionary/about.pl.html">O stronie</a>&nbsp;
-                |&nbsp;Wybierz język:&nbsp;
-                <select name="langs" title="Wybierz język">
+                <a href="/Endangered-Languages-Dictionary/index.en.html">Home</a>&nbsp;
+                |&nbsp;<a href="/Endangered-Languages-Dictionary/search.en.html">Search</a>&nbsp;
+                |&nbsp;<a href="/Endangered-Languages-Dictionary/about.en.html">About this site</a>&nbsp;
+                |&nbsp;Choose language:&nbsp;
+                <select name="langs" title="Choose language">
                     <option value="pl">Polski</option>
                     <option value="en">English</option>
                     <option value="de">Deutsch</option>
                     <option value="es">Español</option>
                 </select>&nbsp;
-                <button type="submit" id="lang-submit" onclick="changeLang();">Zatwierdź</button>
+                <button type="submit" id="lang-submit" onclick="changeLang();">Submit</button>
                 </nav>
             </div>
         </div>
@@ -61,46 +61,46 @@
                     <option value="dsb_en">Lower Sorbian (Dolnoserbski) - English</option>
                 </optgroup>
                 <optgroup label="Upper Sorbian (Hornjoserbsce)">
-                    <option value="en_hsb">English - Upper Sorbian (Hornjoserbsce)</option>
+                    <option value="en_hsb">English - Upper Sorbian (Hornjoserbsce) </option>
                     <option value="hsb_en">Upper Sorbian (Hornjoserbsce) - English</option>
                 </optgroup>
-                <optgroup label="Vilamovian (Wymysiöryś)">
+                <optgroup label="Vilamovian (Wymysiöeryś)">
                     <option value="en_wym">English - Vilamovian (Wymysiöeryś)</option>
-                    <option value="wym_en">Vilamovian (Wymysiöeryś) - English</option>
+                    <option value="wym_pen">Vilamovian (Wymysiöeryś) - English</option>
                 </optgroup>
                 <optgroup label="Rusyn">
                     <option value="en_rue">English - Rusyn</option>
                     <option value="rue_en">Rusyn - English</option>
                 </optgroup>
             </select>
-            <button type="submit" id="query-submit">Wyszukaj</button> 
+            <button type="submit" id="query-submit">Search</button> 
         </form>
-        <strong>Hasło: </strong><br>
+        <strong>Entry: </strong><br>
         <div id="phrase"></div>
-        <strong>tłumaczenia</strong><br>
+        <strong>translations</strong><br>
         <ul id="translations"></ul>
-        <span id="part-of-speech">Część mowy: <em></em></span><br>
-        <span id="IPA"><a href="pl.wikipedia.org/wiki/Międzynarodowy_alfabet_fonetyczny">MAF</a>: </span>
-        <span id="Kirschenbaum"><a href="pl.wikipedia.org/wiki/Kirschenbaum">Kirschenbaum</a>: </span>
+        <span id="part-of-speech">Part of Speech: <em></em></span><br>
+        <span id="IPA"><a href="en.wikipedia.org/wiki/International_Phonetic_Alphabet">IPA</a>: </span>
+        <span id="Kirschenbaum"><a href="en.wikipedia.org/wiki/Kirschenbaum">Kirschenbaum</a>: </span>
         <span id="SPA"><a href="pl.wiktionary.org/wiki/Aneks:Język_polski_-_wymowa_-_głoski">AS</a>: </span>
         <span id="UPA"><a href="en.wikipedia.org/wiki/Uralic_Phonetic_Alphabet">UPA</a>: </span>
         <hr>
-        <strong>antonimy</strong><br>
+        <strong>antonyms</strong><br>
         <span id="antonyms"></span><br>
-        <strong>hiponimy</strong><br>
+        <strong>hyponyms</strong><br>
         <span id="hyponyms"></span><br>
-        <strong>hiperonimy</strong><br>
+        <strong>hyperonyms</strong><br>
         <span id="hyperonyms"></span><br>
-        <strong>frazy powiązane</strong><br>
+        <strong>related phrases</strong><br>
         <span id="related"></span>
         <hr>
-        <strong>Przykładowe zdania:</strong><br>
+        <strong>Example sentences:</strong><br>
         <ul id="sentences"></ul>
         <script>
             const URLQuery = new URLSearchParams(window.location.search);
             console.log(URLQuery);
             if(URLQuery.has("elasticity")) {
-                window.location.replace("https://ankiedos.github.io/Endangered-Languages-Dictionary/search.pl.html?elasticity=" + URLQuery.get("elasticity") + "&text=" + URLQuery.get("text") + "&dictionary=" + URLQuery.get("dictionary"));
+                window.location.replace("https://ankiedos.github.io/Endangered-Languages-Dictionary/search.en.html?elasticity=" + URLQuery.get("elasticity") + "&text=" + URLQuery.get("text") + "&dictionary=" + URLQuery.get("dictionary"));
             }
             else {
                 var phrase = URLQuery.get("q");
@@ -140,7 +140,7 @@
                 for(var trans = 0; trans < entry.translations.length; trans++) {
                     var li = document.createElement("li");
                     var a = document.createElement("a");
-                    a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.translations[trans] + "&dict=" + reverseDict(dict);
+                    a.href = "/Endangered-Languages-Dictionary/entry.en.html?q=" + entry.translations[trans] + "&dict=" + reverseDict(dict);
                     a.appendChild(document.createTextNode(entry.translations[trans]));
                     li.appendChild(a);
                     translationsList.appendChild(li);
@@ -153,54 +153,54 @@
                     if(entry.antonyms.length > 0) {
                         for(var ant = 0; ant < entry.antonyms.length - 1; ant++) {
                             var a = document.createElement("a");
-                            a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.antonyms[ant] + "&dict=" + dict;
+                            a.href = "/Endangered-Languages-Dictionary/entry.en.html?q=" + entry.antonyms[ant] + "&dict=" + dict;
                             a.appendChild(document.createTextNode(entry.antonyms[ant]));
                             antonymsSpan.appendChild(a);
                             antonymsSpan.appendChild(document.createTextNode(", "));
                         }
                         var a = document.createElement("a");
-                        a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.antonyms[entry.antonyms.length - 1] + "&dict=" + dict;
+                        a.href = "/Endangered-Languages-Dictionary/entry.en.html?q=" + entry.antonyms[entry.antonyms.length - 1] + "&dict=" + dict;
                         a.appendChild(document.createTextNode(entry.antonyms[entry.antonyms.length - 1]));
                         antonymsSpan.appendChild(a);
                     }
-                    else antonymsSpan.appendChild(document.createTextNode("brak"));
+                    else antonymsSpan.appendChild(document.createTextNode("none"));
 
                     // hyponyms
                     if(entry.hyponyms.length > 0) {
                         for(var hyp = 0; hyp < entry.hyponyms.length - 1; hyp++) {
                             var a = document.createElement("a");
-                            a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.hyponyms[hyp] + "&dict=" + dict;
+                            a.href = "/Endangered-Languages-Dictionary/entry.en.html?q=" + entry.hyponyms[hyp] + "&dict=" + dict;
                             a.appendChild(document.createTextNode(entry.hyponyms[hyp]));
                             hyponymsSpan.appendChild(a);
                             hyponymsSpan.appendChild(document.createTextNode(", "));
                         }
                         var a = document.createElement("a");
-                        a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.hyponyms[entry.hyponyms.length - 1] + "&dict=" + dict;
+                        a.href = "/Endangered-Languages-Dictionary/entry.en.html?q=" + entry.hyponyms[entry.hyponyms.length - 1] + "&dict=" + dict;
                         a.appendChild(document.createTextNode(entry.hyponyms[entry.hyponyms.length - 1]));
                         hyponymsSpan.appendChild(a);
                     }
-                    else hyponymsSpan.appendChild(document.createTextNode("brak"));
+                    else hyponymsSpan.appendChild(document.createTextNode("none"));
 
                     // hyperonyms
                     if(entry.hyperonyms.length > 0) {
                         for(var hyper = 0; hyper < entry.hyperonyms.length - 1; hyper++) {
                             var a = document.createElement("a");
-                            a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.hyperonyms[hyper] + "&dict=" + dict;
+                            a.href = "/Endangered-Languages-Dictionary/entry.en.html?q=" + entry.hyperonyms[hyper] + "&dict=" + dict;
                             a.appendChild(document.createTextNode(entry.hyperonyms[hyper]));
                             hyperonymsSpan.appendChild(a);
                             hyperonymsSpan.appendChild(document.createTextNode(", "));
                         }
                         var a = document.createElement("a");
-                        a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.hyperonyms[entry.hyperonyms.length - 1] + "&dict=" + dict;
+                        a.href = "/Endangered-Languages-Dictionary/entry.en.html?q=" + entry.hyperonyms[entry.hyperonyms.length - 1] + "&dict=" + dict;
                         a.appendChild(document.createTextNode(entry.hyperonyms[entry.hyperonyms.length - 1]));
                         hyperonymsSpan.appendChild(a);
                     }
-                    else hyperonymsSpan.appendChild(document.createTextNode("brak"));
+                    else hyperonymsSpan.appendChild(document.createTextNode("none"));
                 }
                 else {
-                    antonymsSpan.appendChild(document.createTextNode("brak"));
-                    hyponymsSpan.appendChild(document.createTextNode("brak"));
-                    hyperonymsSpan.appendChild(document.createTextNode("brak"));
+                    antonymsSpan.appendChild(document.createTextNode("none"));
+                    hyponymsSpan.appendChild(document.createTextNode("none"));
+                    hyperonymsSpan.appendChild(document.createTextNode("none"));
                 }
 
                 // related
@@ -208,21 +208,21 @@
                 if(entry.related.length > 0) {
                     for(var rel = 0; rel < entry.related.length - 1; rel++) {
                         var a = document.createElement("a");
-                        a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.related[rel] + "&dict=" + dict;
+                        a.href = "/Endangered-Languages-Dictionary/entry.en.html?q=" + entry.related[rel] + "&dict=" + dict;
                         a.appendChild(document.createTextNode(entry.related[rel]));
                         relatedSpan.appendChild(a);
                         relatedSpan.appendChild(document.createTextNode(", "));
                     }
                     var a = document.createElement("a");
-                    a.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + entry.related[entry.related.length - 1] + "&dict=" + dict;
+                    a.href = "/Endangered-Languages-Dictionary/entry.en.html?q=" + entry.related[entry.related.length - 1] + "&dict=" + dict;
                     a.appendChild(document.createTextNode(entry.related[entry.related.length - 1]));
                     relatedSpan.appendChild(a);
                 }
-                else relatedSpan.appendChild(document.createTextNode("brak"));
+                else relatedSpan.appendChild(document.createTextNode("none"));
 
                 // Part of Speech
                 var posSpan = document.querySelector("#part-of-speech").querySelector("em");
-                posSpan.appendChild(document.createTextNode(translatePOS(entry.pos[0] == 'S' ? entry.pos.substring(1) : entry.pos, "pl")));
+                posSpan.appendChild(document.createTextNode(translatePOS(entry.pos[0] == 'S' ? entry.pos.substring(1) : entry.pos, "en")));
 
                 // example sentences
                 var sentencesList = document.querySelector("#sentences");
@@ -233,7 +233,7 @@
                         sentencesList.appendChild(li);
                     }
                 }
-                else sentencesList.appendChild(document.createElement("li").appendChild(document.createTextNode("brak")));
+                else sentencesList.appendChild(document.createElement("li").appendChild(document.createTextNode("none")));
             }
         </script>
     </body>
