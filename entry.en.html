@@ -96,6 +96,7 @@
         <hr>
         <strong>Example sentences:</strong><br>
         <ul id="sentences"></ul>
+        <span id="lackof-sentences">none</span>
         <script>
             const URLQuery = new URLSearchParams(window.location.search);
             console.log(URLQuery);
@@ -232,8 +233,10 @@
                         li.appendChild(document.createTextNode(entry.sentences[sent]));
                         sentencesList.appendChild(li);
                     }
+                    var sent_lack = document.querySelector("#lackof-sentences");
+                    sent_lack.remove();
                 }
-                else sentencesList.appendChild(document.createElement("li").appendChild(document.createTextNode("none")));
+                //else sentencesList.appendChild(document.createElement("li").appendChild(document.createTextNode("none")));
             }
         </script>
     </body>
