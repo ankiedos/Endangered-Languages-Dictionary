@@ -1,6 +1,7 @@
 function changeLang(current)
 {
     var select = document.querySelector("select[name=langs]");
+    if(select.value != "pl" && select.value != "en") window.location.pathname = "/Endangered-Languages-Dictionary/lack-of-translation." + current + ".html";
     var URL = window.location.pathname;
     if(window.location.href == "https://ankiedos.github.io/Endangered-Languages-Dictionary/") window.location.href = "https://ankiedos.github.io/Endangered-Languages-Dictionary/index." + select.value + ".html";
     else {
