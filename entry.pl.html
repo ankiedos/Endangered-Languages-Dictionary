@@ -227,7 +227,7 @@
 
                 // example sentences
                 var sentencesList = document.querySelector("#sentences");
-                if(entry.sentences.length > 0) {
+                if(entry.sentences.length > 0 && entry.sentences[0] != "") {
                     for(var sent = 0; sent < entry.sentences.length; sent++) {
                         var li = document.createElement("li");
                         li.appendChild(document.createTextNode(entry.sentences[sent]));
