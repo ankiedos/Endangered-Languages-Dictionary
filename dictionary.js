@@ -99,3 +99,36 @@ var dictionaries = {
         sentences: ["Òno "]}
     ]
 };
+function reverseDict(dict) {
+    switch(dict) {
+        case "pl_csb": return "csb_pl";
+        case "pl_dsb": return "dsb_pl";
+        case "pl_hsb": return "hsb_pl";
+        case "pl_wym": return "wym_pl";
+        case "pl_rue": return "rue_pl";
+        case "csb_pl": return "pl_csb";
+        case "dsb_pl": return "pl_dsb";
+        case "hsb_pl": return "pl_hsb";
+        case "wym_pl": return "pl_wym";
+        case "rue_pl": return "pl_rue";
+
+        case "en_csb": return "csb_en";
+        case "en_dsb": return "dsb_en";
+        case "en_hsb": return "hsb_en";
+        case "en_wym": return "wym_en";
+        case "en_rue": return "rue_en";
+        case "csb_en": return "en_csb";
+        case "dsb_en": return "en_dsb";
+        case "hsb_en": return "en_hsb";
+        case "wym_en": return "en_wym";
+        case "rue_en": return "en_rue";
+        default: return "";
+    }
+}
+function dictionaryExists(dict) {
+    switch(dict) {
+        case "pl_csb": return true;
+        case "csb_pl": return true;
+        default: return false;
+    }
+}

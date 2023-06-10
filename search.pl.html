@@ -80,22 +80,30 @@
         <script>
             const URLQuery = new URLSearchParams(window.location.search);
             console.log(URLQuery);
-            var results = searchWithLevenshteinDist(URLQuery.get("text"), URLQuery.get("elasticity"), URLQuery.get("dictionary"));
             var resultsContainer = document.querySelector("#search-results");
-            while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
-            if(!results.res) {
-                resultsContainer.appendChild(document.createTextNode("Nie udało się znaleźć nic, co pasowałoby do wyszukiwanej frazy."));
+            if(!dictionaryExists(URLQuery.get("dictionary"))) {
+                var warning_img = document.createElement("img");
+                warning_img.src = "/Endangered-Languages-Dictionary/in progress.jpg";
+                resultsContainer.appendChild(warning_img);
+                resultsContainer.appendChild(document.createTextNode("Słownik w budowie. Przepraszamy."));
             }
             else {
-                var res = results.res;
-                for(var r of res) {
-                    console.log("Listing a phrase entry: " + r + "\n");
-                    var phraseEntry = document.createElement("a");
-                    phraseEntry.className = "search-result";
-                    phraseEntry.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + r + "&dict=" + results.dict;
-                    phraseEntry.appendChild(document.createTextNode(r));
-                    resultsContainer.appendChild(phraseEntry);
-                    resultsContainer.appendChild(document.createElement("br"));
+                var results = searchWithLevenshteinDist(URLQuery.get("text"), URLQuery.get("elasticity"), URLQuery.get("dictionary"));
+                while(resultsContainer.firstChild) resultsContainer.removeChild(resultsContainer.lastChild);
+                if(!results.res) {
+                    resultsContainer.appendChild(document.createTextNode("Nie udało się znaleźć nic, co pasowałoby do wyszukiwanej frazy."));
+                }
+                else {
+                    var res = results.res;
+                    for(var r of res) {
+                        console.log("Listing a phrase entry: " + r + "\n");
+                        var phraseEntry = document.createElement("a");
+                        phraseEntry.className = "search-result";
+                        phraseEntry.href = "/Endangered-Languages-Dictionary/entry.pl.html?q=" + r + "&dict=" + results.dict;
+                        phraseEntry.appendChild(document.createTextNode(r));
+                        resultsContainer.appendChild(phraseEntry);
+                        resultsContainer.appendChild(document.createElement("br"));
+                    }
                 }
             }
         </script>
