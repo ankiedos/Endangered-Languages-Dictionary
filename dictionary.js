@@ -57,7 +57,7 @@ var dictionaries = {
         sentences: []},
         {phrase: "Wy", translations: ["Wë"],
         antonyms: [], hyponyms: [], hyperonyms: [],
-        related: ["Pan", "Pani", "Państwo"], pos: "perpron",
+        related: [/* "Pan", "Pani", "Państwo" */], pos: "perpron",
         pronounciation: {IPA: "[wə]", SPA: "[vъ]", UPA: "", Kirshenbaum: "[v@]"},
         sentences: ["Wë jesce pò prôwdze... przekãsnô. (Jan Rompski, Pòrénk)"]},
         {phrase: "kaszubski", translations: ["kaszëbsczi"],
@@ -66,7 +66,17 @@ var dictionaries = {
         pronounciation: {IPA: "[kaʃəbs̪t̪͡ʃi]", SPA: "[kašъbsči]", UPA: "", Kirshenbaum: "[kaS@bs[t[Si]"},
         sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim\
         zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie-\
-        strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
+        strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "dzisiaj", translations: ["dzysô", "dzys"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: ["dziś"/* "wczoraj", "jutro" */], pos: "adv",
+        pronounciation: {IPA: "[d̪͡z̪isɞ]", SPA: "", UPA: "", Kirshenbaum: "[d[z[isO\"]"},
+        sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
+        {phrase: "dziś", translations: ["dzysô", "dzys"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: ["dzisiaj"/* "wczoraj", "jutro" */], pos: "adv",
+        pronounciation: {IPA: "[d̪͡z̪is]", SPA: "[ʒis]", UPA: "", Kirshenbaum: "[d[z[isO\"]"},
+        sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
     ],
     csb_pl: [
         {phrase: "jãzëk", translations: ["język"],
@@ -126,7 +136,7 @@ var dictionaries = {
         sentences: []},
         {phrase: "Wë", translations: ["Wy"],
         antonyms: [], hyponyms: [], hyperonyms: [],
-        related: ["Pôn", "Pôni"], pos: "perpron",
+        related: [/* "Pôn", "Pôni" */], pos: "perpron",
         pronounciation: {IPA: "[wə]", SPA: "[vъ]", UPA: "", Kirshenbaum: "[v@]"},
         sentences: ["Wë jesce pò prôwdze... przekãsnô. (Jan Rompski, Pòrénk)"]},
         {phrase: "kaszëbsczi", translations: ["kaszubski"],
@@ -135,7 +145,17 @@ var dictionaries = {
         pronounciation: {IPA: "[kaʃəbs̪t̪͡ʃi]", SPA: "[kašъbsči]", UPA: "", Kirshenbaum: "[kaS@bs[t[Si]"},
         sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim\
         zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie-\
-        strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
+        strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "dzysô", translations: ["dzisiaj", "dziś"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: ["dzys"/* "wczoraj", "jutro" */], pos: "adv",
+        pronounciation: {IPA: "[d̪͡z̪isɞ]", SPA: "", UPA: "", Kirshenbaum: "[d[z[isO\"]"},
+        sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
+        {phrase: "dzys", translations: ["dzisiaj", "dziś"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: ["dzysô"/* "wczoraj", "jutro" */], pos: "adv",
+        pronounciation: {IPA: "[d̪͡z̪is]", SPA: "[ʒis]", UPA: "", Kirshenbaum: "[d[z[is]"},
+        sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
     ]
 };
 function reverseDict(dict) {
