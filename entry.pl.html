@@ -81,7 +81,7 @@
         <ul id="translations"></ul>
         <span id="part-of-speech">Część mowy: <em></em></span><br>
         <span id="IPA"><a href="pl.wikipedia.org/wiki/Międzynarodowy_alfabet_fonetyczny">MAF</a>: </span>
-        <span id="Kirschenbaum"><a href="pl.wikipedia.org/wiki/Kirschenbaum">Kirschenbaum</a>: </span>
+        <span id="Kirshenbaum"><a href="pl.wikipedia.org/wiki/Kirshenbaum">Kirshenbaum</a>: </span>
         <span id="SPA"><a href="pl.wiktionary.org/wiki/Aneks:Język_polski_-_wymowa_-_głoski">AS</a>: </span>
         <span id="UPA"><a href="en.wikipedia.org/wiki/Uralic_Phonetic_Alphabet">UPA</a>: </span>
         <hr>
@@ -132,9 +132,9 @@
                 }
                 else UPASpan.appendChild(document.createTextNode(entry.pronounciation.UPA));
 
-                // Kirschenbaum
-                var KirschenbaumSpan = document.querySelector("#Kirschenbaum");
-                KirschenbaumSpan.appendChild(document.createTextNode(entry.pronounciation.Kirschenbaum));
+                // Kirshenbaum
+                var KirshenbaumSpan = document.querySelector("#Kirshenbaum");
+                KirshenbaumSpan.appendChild(document.createTextNode(entry.pronounciation.Kirshenbaum));
 
                 // translations
                 var translationsList = document.querySelector("#translations");
