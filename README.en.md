@@ -10,6 +10,7 @@ This project aims to be a dictionary for as much as possible of world's language
 - [] Ainu
 - [] Manchu
 - [] a lot of Caucasian languages
+- [] and many more...
 Apart from that, this website is going to be available in different languages. Here's a list of ready & planned:
 - [x] English
 - [x] Polish

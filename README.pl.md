@@ -10,6 +10,7 @@ Projekt ten ma na celu stanie się słownikiem dla jak największej liczby języ
 - [] ainu
 - [] mandżurski
 - [] wiele języków kaukaskich
+- [] i wiele innych
 Poza tym, strona ta będzie dostępna w wielu językach. Poniżej przedstawione są gotowe i planowane:
 - [x] angielski
 - [x] polski
