@@ -223,7 +223,9 @@
 
                 // Part of Speech
                 var posSpan = document.querySelector("#part-of-speech").querySelector("em");
-                posSpan.appendChild(document.createTextNode(translatePOS(entry.pos[0] == 'S' ? entry.pos.substring(1) : entry.pos, "pl")));
+                for(var i = 0; i < entry.pos.length; i++) {
+                    posSpan.appendChild(document.createTextNode(translatePOS(entry.pos[i][0] == 'S' ? entry.pos[i].substring(1) : entry.pos[i], "pl")));
+                }
 
                 // example sentences
                 var sentencesList = document.querySelector("#sentences");

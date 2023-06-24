@@ -95,7 +95,7 @@
                     resultsContainer.appendChild(document.createTextNode("Nie udało się znaleźć nic, co pasowałoby do wyszukiwanej frazy."));
                 }
                 else {
-                    var res = results.res;
+                    var res = results.res.sort();
                     for(var r of res) {
                         var phraseEntry = document.createElement("a");
                         phraseEntry.className = "search-result";
