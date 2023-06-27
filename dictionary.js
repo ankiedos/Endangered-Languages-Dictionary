@@ -65,8 +65,8 @@ var dictionaries = {
         related: ["język", "Kaszuby"], pos: ["Sadj"],
         pronounciation: {IPA: "[kaʃəbs̪t̪͡ʃi]", SPA: "[kašъbsči]", UPA: "", Kirshenbaum: "[kaS@bs[t[Si]"},
         sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim \
-        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie\
-        strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten\
+        niestrëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
         {phrase: "dzisiaj", translations: ["dzysô", "dzys"],
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: ["dziś"/* "wczoraj", "jutro" */], pos: ["adv"],
@@ -142,8 +142,8 @@ var dictionaries = {
         related: [], pos: ["Sn"],
         pronounciation: {IPA: "[wɛjt̪͡s̪]", SPA: "[u̯ei̯t̪͡s̪]", UPA: "", Kirshenbaum: "[wEjt[s[]"},
         sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim \
-        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie\
-        strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
+        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten\
+        niestrëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
     ],
     csb_pl: [
         {phrase: "jãzëk", translations: ["język"],
@@ -211,8 +211,8 @@ var dictionaries = {
         related: ["jãzëk", "Kaszëbë"], pos: ["Sadj"],
         pronounciation: {IPA: "[käʃəbs̪t̪͡ʃi]", SPA: "[käšъbsči]", UPA: "", Kirshenbaum: "[ka\"S@bs[t[Si]"},
         sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim\
-        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie\
-        strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten\
+        niestrëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
         {phrase: "dzysô", translations: ["dzisiaj", "dziś"],
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: ["dzys"/* "wczoraj", "jutro" */], pos: ["adv"],
@@ -293,8 +293,8 @@ var dictionaries = {
         related: [], pos: ["Sn"],
         pronounciation: {IPA: "[wɛjt̪͡s̪]", SPA: "[u̯ei̯t̪͡s̪]", UPA: "", Kirshenbaum: "[wEjt[s[]"},
         sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim \
-        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie\
-        strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
+        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten\
+        niestrëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
     ]
 };
 function reverseDict(dict) {
