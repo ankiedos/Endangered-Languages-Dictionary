@@ -25,6 +25,7 @@ Przez to, arkusze stylów nie są przepełnione regułami. Mam nadzieję, że je
 
 # Czy są jakieś plany na rozwój?
 Tak. Planowane jest stworzenie wortalu internetowego dotyczącego języków. Szczegóły znajdują się poniżej:
+- Przypisać definicje do różnych tłumaczeń wyrażeń
 - Stworzyć lekcje i ćwiczenia dla języków obsługiwanych przez słownik
 - Rozszerzyć stronę tak, by obecny stan stał się jedynie jedną z sekcji
   - Sekcje dla pomocniczych, badawczych, logicznych i filozoficznych, artystycznych, oraz innmych sztucznych języków

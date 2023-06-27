@@ -25,6 +25,7 @@ Therefore, it does not depend heavily on stylesheets. I hope this is understanda
 
 # Any plans on extending this?
 Yes. The plan is to create a vortal about languages. A detailed roadmap follows:
+- Assign definitions to various translations of entries
 - Create lessons & excercises on the languages handled by the dictionary
 - Extend this website so that the previous version will be just a section
   - Sections for auxiliary, research, logical & philosophical, artistic, and other constructed languages

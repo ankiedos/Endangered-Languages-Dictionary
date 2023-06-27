@@ -61,32 +61,89 @@ var dictionaries = {
         pronounciation: {IPA: "[və]", SPA: "[vъ]", UPA: "", Kirshenbaum: "[v@]"},
         sentences: ["Wë jesce pò prôwdze... przekãsnô. (Jan Rompski, Pòrénk)"]},
         {phrase: "kaszubski", translations: ["kaszëbsczi"],
-        antonyms: [], hyponyms: [], hyperonyms: [],
-        related: ["język"], pos: ["Sadj"],
+        antonyms: [], hyponyms: [], hyperonyms: ["pomorski"],
+        related: ["język", "Kaszuby"], pos: ["Sadj"],
         pronounciation: {IPA: "[kaʃəbs̪t̪͡ʃi]", SPA: "[kašъbsči]", UPA: "", Kirshenbaum: "[kaS@bs[t[Si]"},
-        sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim\
-        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie-\
+        sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim \
+        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie\
         strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
         {phrase: "dzisiaj", translations: ["dzysô", "dzys"],
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: ["dziś"/* "wczoraj", "jutro" */], pos: ["adv"],
-        pronounciation: {IPA: "[d̪͡z̪isɞ]", SPA: "", UPA: "", Kirshenbaum: "[d[z[isO\"]"},
+        pronounciation: {IPA: "[d̪͡z̪is̪ɞ]", SPA: "", UPA: "", Kirshenbaum: "[d[z[is[O\"]"},
         sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
         {phrase: "dziś", translations: ["dzysô", "dzys"],
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: ["dzisiaj"/* "wczoraj", "jutro" */], pos: ["adv"],
-        pronounciation: {IPA: "[d̪͡z̪is]", SPA: "[ʒis]", UPA: "", Kirshenbaum: "[d[z[isO\"]"},
+        pronounciation: {IPA: "[d̪͡z̪is̪]", SPA: "[ʒis]", UPA: "", Kirshenbaum: "[d[z[is[]"},
         sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
         {phrase: "życie", translations: ["żëcé"],
-        antonyms: []. hyponyms: [], hyperonyms: [],
+        antonyms: [], hyponyms: [], hyperonyms: [],
         related: [/* śmierć */], pos: ["Sn"],
         pronounciation: {IPA: "[ʒəce]", SPA: "[žъcė]", UPA: "", Kirshenbaum: "[Z@t[s[e]"},
         sentences: ["Żëcé Jegò bëło jednym cégã biôtkòwaniô, a równak nie zmògłë gò mòce procëmné. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
-        {phrase: "jednak", translations: ["równak"],
+        {phrase: "jednak", translations: ["jednak", "równak"],
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: [/* równy */], pos: ["part", "conj"],
         pronounciation: {IPA: "[rovn̪äk]", SPA: "[rȯvnäk]", UPA: "", Kirshenbaum: "[rovn[a\"k]"},
-        sentences: ["Żëcé Jegò bëło jednym cégã biôtkòwaniô, a równak nie zmògłë gò mòce procëmné. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
+        sentences: [
+            "Żëcé Jegò bëło jednym cégã biôtkòwaniô, a równak nie zmògłë gò mòce procëmné. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)",
+            "Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"
+        ]},
+        {phrase: "nie", translations: ["nie"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: ["tak"], pos: ["part"],
+        pronounciation: {IPA: "[ɲɛ]", SPA: "[ńe]", UPA: "", Kirshenbaum: "[n^E]"},
+        sentences: ["Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "tak", translations: ["tak"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: ["nie"], pos: ["part", "adv"],
+        pronounciation: {IPA: "[t̪äk]", SPA: "[täk]", UPA: "", Kirshenbaum: "[t[a\"k]"},
+        sentences: [
+            "Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)",
+            "Tak! Tak! Cenôwa… Jenkù, jaczé to stôré dzeje… (Jan Rompski, Pòrénk)"
+        ]},
+        {phrase: "wiedzieć", translations: ["wiedzec"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: [], pos: ["vint"],
+        pronounciation: {IPA: "[vʲɛd̪͡z̪ɛt̪͡s̪]", SPA: "[v'eʒec]", UPA: "", Kirshenbaum: "[v;Ed[z[Et[s[]"},
+        sentences: ["Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "o", translations: ["ò"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: [], pos: ["part"],
+        pronounciation: {IPA: "[wɛ]", SPA: "[u̯e]", UPA: "", Kirshenbaum: "[wE]"},
+        sentences: ["Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "Kaszuby", translations: "Kaszëbë",
+        antonyms: [], hyponyms: [], hyperonyms: ["Pòmòrskô"],
+        related: ["kaszubski"], pos: ["Sn"],
+        pronounciation: {IPA: "[käʃəbə]", SPA: "[käš'ъk]", UPA: "", Kirshenbaum: "[ka\"S@b@]"},
+        sentences: ["Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "Pomorze", translations: ["Pòmòrskô"],
+        antonyms: [], hyponyms: ["Kaszuby"], hyperonyms: [],
+        related: ["pomorski"], pos: ["Sn"],
+        pronounciation: {IPA: "[pwɛmwɛrs̪kɞ]", SPA: "", UPA: "", Kirshenbaum: "[pwEmwErs[kO\"]"},
+        sentences: []},
+        {phrase: "pomorski", translations: ["pòmòrsczi"],
+        antonyms: [], hyponyms: ["kaszubski"], hyperonyms: [],
+        related: ["Pomorze", "kaszubski"], pos: ["Sadj"],
+        pronounciation: {IPA: "[pwɛmwɛrs̪t̪͡ʃi]", SPA: "[pu̯emu̯ersči]", UPA: "", Kirshenbaum: "[pwEmwErs[t[S[i]"},
+        sentences: ["Nie trzeba nama sã wstidzëc z mòwą, bò wiémë, że mòwa to \
+        òjców naszich z czasów, czej na pòlach dzys zòrónëch szëmiałë lasë ò pòdajach przesnôżich, \
+        a wòdë szemarzëłë chòrankã Pòmòrsczi na swëch wałach – wastczi spiéwałë ò ricerzach spiéwë teskné. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "wstydzić", translations: ["wstidzëc"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: [], pos: ["vt"],
+        pronounciation: {IPA: "[fs̪t̪id̪͡z̪ət̪͡s̪]", SPA: "[fstiʒъc]", UPA: "", Kirshenbaum: "[fs[t[id[z[@t[s[]"},
+        sentences: ["Nie trzeba nama sã wstidzëc z mòwą, bò wiémë, że mòwa to\
+        òjców naszich z czasów, czej na pòlach dzys zòrónëch szëmiałë lasë ò pòdajach przesnôżich, \
+        a wòdë szemarzëłë chòrankã Pòmòrsczi na swëch wałach – wastczi spiéwałë ò ricerzach spiéwë teskné. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "ojciec", translations: ["òjc"],
+        antonyms: [], hyponyms: [], hyperonyms: [/* rodzic */],
+        related: [], pos: ["Sn"],
+        pronounciation: {IPA: "[wɛjt̪͡s̪]", SPA: "[u̯ei̯t̪͡s̪]", UPA: "", Kirshenbaum: "[wEjt[s[]"},
+        sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim \
+        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie\
+        strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
     ],
     csb_pl: [
         {phrase: "jãzëk", translations: ["język"],
@@ -150,8 +207,8 @@ var dictionaries = {
         pronounciation: {IPA: "[və]", SPA: "[vъ]", UPA: "", Kirshenbaum: "[v@]"},
         sentences: ["Wë jesce pò prôwdze... przekãsnô. (Jan Rompski, Pòrénk)"]},
         {phrase: "kaszëbsczi", translations: ["kaszubski"],
-        antonyms: [], hyponyms: [], hyperonyms: [],
-        related: ["jãzëk"], pos: ["Sadj"],
+        antonyms: [], hyponyms: [], hyperonyms: ["pòmòrsczi"],
+        related: ["jãzëk", "Kaszëbë"], pos: ["Sadj"],
         pronounciation: {IPA: "[käʃəbs̪t̪͡ʃi]", SPA: "[käšъbsči]", UPA: "", Kirshenbaum: "[ka\"S@bs[t[Si]"},
         sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim\
         zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie-\
@@ -159,12 +216,12 @@ var dictionaries = {
         {phrase: "dzysô", translations: ["dzisiaj", "dziś"],
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: ["dzys"/* "wczoraj", "jutro" */], pos: ["adv"],
-        pronounciation: {IPA: "[d̪͡z̪isɞ]", SPA: "", UPA: "", Kirshenbaum: "[d[z[isO\"]"},
+        pronounciation: {IPA: "[d̪͡z̪is̪ɞ]", SPA: "", UPA: "", Kirshenbaum: "[d[z[is[O\"]"},
         sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
         {phrase: "dzys", translations: ["dzisiaj", "dziś"],
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: ["dzysô"/* "wczoraj", "jutro" */], pos: ["adv"],
-        pronounciation: {IPA: "[d̪͡z̪is]", SPA: "[ʒis]", UPA: "", Kirshenbaum: "[d[z[is]"},
+        pronounciation: {IPA: "[d̪͡z̪is̪]", SPA: "[ʒis]", UPA: "", Kirshenbaum: "[d[z[is[]"},
         sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
         {phrase: "żëcé", translations: ["życie"],
         antonyms: []. hyponyms: [], hyperonyms: [],
@@ -175,7 +232,69 @@ var dictionaries = {
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: [/* równy */], pos: ["part", "conj"],
         pronounciation: {IPA: "[rovn̪äk]", SPA: "[rȯvnäk]", UPA: "", Kirshenbaum: "[rovn[a\"k]"},
-        sentences: ["Żëcé Jegò bëło jednym cégã biôtkòwaniô, a równak nie zmògłë gò mòce procëmné. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
+        sentences: ["Żëcé Jegò bëło jednym cégã biôtkòwaniô, a równak nie zmògłë gò mòce procëmné. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "jednak", translations: ["jednak"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: [/* równy */], pos: ["part", "conj"],
+        pronounciation: {IPA: "[jɛd̪n̪äk]", SPA: "[jednäk]", UPA: "", Kirshenbaum: "[jEd[n[a\"k]"},
+        sentences: [
+            "Żëcé Jegò bëło jednym cégã biôtkòwaniô, a równak nie zmògłë gò mòce procëmné. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)",
+            "Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"
+        ]},
+        {phrase: "nie", translations: ["nie"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: ["tak"], pos: ["part"],
+        pronounciation: {IPA: "[ɲɛ]", SPA: "[ńe]", UPA: "", Kirshenbaum: "[n^E]"},
+        sentences: ["Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "tak", translations: ["tak"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: ["nie"], pos: ["part", "adv"],
+        pronounciation: {IPA: "[t̪äk]", SPA: "[täk]", UPA: "", Kirshenbaum: "[t[a\"k]"},
+        sentences: [
+            "Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)",
+            "Tak! Tak! Cenôwa… Jenkù, jaczé to stôré dzeje… (Jan Rompski, Pòrénk)"
+        ]},
+        {phrase: "wiedzec", translations: ["wiedzieć"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: [], pos: ["vint"],
+        pronounciation: {IPA: "[vʲɛd̪͡z̪ɛt̪͡s̪]", SPA: "[v'eʒec]", UPA: "", Kirshenbaum: "[v;Ed[z[Et[s[]"},
+        sentences: ["Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "ò", translations: ["o"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: [], pos: ["part"],
+        pronounciation: {IPA: "[wɛ]", SPA: "[u̯e]", UPA: "", Kirshenbaum: "[wE]"},
+        sentences: ["Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "Kaszëbë", translations: "Kaszuby",
+        antonyms: [], hyponyms: [], hyperonyms: ["Pòmòrskô"],
+        related: ["kaszëbsczi"], pos: ["Sn"],
+        pronounciation: {IPA: "[käʃəbə]", SPA: "[käš'ъk]", UPA: "", Kirshenbaum: "[ka\"S@b@]"},
+        sentences: ["Jednak tak sã nie stało, bò jinaczi nick bë nie bëło wiedzec ò Kaszëbach. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "Pòmòrskô", translations: ["Pomorze"],
+        antonyms: [], hyponyms: ["Kaszëbë"], hyperonyms: [],
+        related: ["pòmòrsczi"], pos: ["Sn"],
+        pronounciation: {IPA: "[pwɛmwɛrs̪kɞ]", SPA: "", UPA: "", Kirshenbaum: "[pwEmwErs[kO\"]"},
+        sentences: []},
+        {phrase: "pòmòrsczi", translations: ["pomorski"],
+        antonyms: [], hyponyms: ["kaszëbsczi"], hyperonyms: [],
+        related: ["Pòmòrskô", "kaszëbsczi"], pos: ["Sadj"],
+        pronounciation: {IPA: "[pwɛmwɛrs̪t̪͡ʃi]", SPA: "[pu̯emu̯ersči]", UPA: "", Kirshenbaum: "[pwEmwErs[t[S[i]"},
+        sentences: ["Nie trzeba nama sã wstidzëc z mòwą, bò wiémë, że mòwa to \
+        òjców naszich z czasów, czej na pòlach dzys zòrónëch szëmiałë lasë ò pòdajach przesnôżich, \
+        a wòdë szemarzëłë chòrankã Pòmòrsczi na swëch wałach – wastczi spiéwałë ò ricerzach spiéwë teskné. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "wstidzëc", translations: ["wstydzić"],
+        antonyms: [], hyponyms: [], hyperonyms: [],
+        related: [], pos: ["vt"],
+        pronounciation: {IPA: "[fs̪t̪id̪͡z̪ət̪͡s̪]", SPA: "[fstiʒъc]", UPA: "", Kirshenbaum: "[fs[t[id[z[@t[s[]"},
+        sentences: ["Nie trzeba nama sã wstidzëc z mòwą, bò wiémë, że mòwa to\
+        òjców naszich z czasów, czej na pòlach dzys zòrónëch szëmiałë lasë ò pòdajach przesnôżich, \
+        a wòdë szemarzëłë chòrankã Pòmòrsczi na swëch wałach – wastczi spiéwałë ò ricerzach spiéwë teskné. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
+        {phrase: "òjc", translations: ["ojciec"],
+        antonyms: [], hyponyms: [], hyperonyms: [/* rodzic */],
+        related: [], pos: ["Sn"],
+        pronounciation: {IPA: "[wɛjt̪͡s̪]", SPA: "[u̯ei̯t̪͡s̪]", UPA: "", Kirshenbaum: "[wEjt[s[]"},
+        sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim \
+        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie\
+        strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
     ]
 };
 function reverseDict(dict) {
