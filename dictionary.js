@@ -71,7 +71,7 @@ var dictionaries = {
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: ["dziś"/* "wczoraj", "jutro" */], pos: ["adv"],
         pronounciation: {IPA: "[d̪͡z̪is̪ɞ]", SPA: "", UPA: "", Kirshenbaum: "[d[z[is[O\"]"},
-        sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
+        sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
         {phrase: "dziś", translations: ["dzysô", "dzys"],
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: ["dzisiaj"/* "wczoraj", "jutro" */], pos: ["adv"],
@@ -211,20 +211,20 @@ var dictionaries = {
         related: ["jãzëk", "Kaszëbë"], pos: ["Sadj"],
         pronounciation: {IPA: "[käʃəbs̪t̪͡ʃi]", SPA: "[käšъbsči]", UPA: "", Kirshenbaum: "[ka\"S@bs[t[Si]"},
         sentences: ["Czej ùmarł Florión Cenôwa, òjc kaszëbsczich zajmów, zdôwało sã, że z Jegò zéńdzenim\
-        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie-\
+        zdżinie wszëtkò, przepadnie w nikwã dejô, jaką so pòstawił w swòjich zgrôwach ten nie\
         strëdzałi Bùdzôrz òstatka Wiôldżich Pòmòrzanów. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
         {phrase: "dzysô", translations: ["dzisiaj", "dziś"],
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: ["dzys"/* "wczoraj", "jutro" */], pos: ["adv"],
         pronounciation: {IPA: "[d̪͡z̪is̪ɞ]", SPA: "", UPA: "", Kirshenbaum: "[d[z[is[O\"]"},
-        sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]}
+        sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
         {phrase: "dzys", translations: ["dzisiaj", "dziś"],
         antonyms: [], hyponyms: [], hyperonyms: [],
         related: ["dzysô"/* "wczoraj", "jutro" */], pos: ["adv"],
         pronounciation: {IPA: "[d̪͡z̪is̪]", SPA: "[ʒis]", UPA: "", Kirshenbaum: "[d[z[is[]"},
         sentences: ["Dzysô leżã w biôłi pòscelë i żdajã kùńca swégò. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
         {phrase: "żëcé", translations: ["życie"],
-        antonyms: []. hyponyms: [], hyperonyms: [],
+        antonyms: [], hyponyms: [], hyperonyms: [],
         related: [/* śmierć */], pos: ["Sn"],
         pronounciation: {IPA: "[ʒəce]", SPA: "[žъcė]", UPA: "", Kirshenbaum: "[Z@t[s[e]"},
         sentences: ["Żëcé Jegò bëło jednym cégã biôtkòwaniô, a równak nie zmògłë gò mòce procëmné. (Zrzesz Kaszëbskô, Florianowi Cenôwie w roczëznã smiercë)"]},
