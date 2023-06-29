@@ -34,13 +34,16 @@ div.nav {
 }
 
 .index-choose-language {
-    min-height: 100px;
-    min-width: 300px;
+    height: 200px;
+    width: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+.index-choose-language>select, .index-choose-language>button {
+    height: auto;
+    width: auto;
+}
 div.header {
     position: relative;
     top: 0px;
