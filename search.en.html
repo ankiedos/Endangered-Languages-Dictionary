@@ -82,9 +82,12 @@
             console.log(URLQuery);
             var resultsContainer = document.querySelector("#search-results");
             if(!dictionaryExists(URLQuery.get("dictionary"))) {
+                var warning_img_hlink = document.createElement("a");
                 var warning_img = document.createElement("img");
+                warning_img_hlink.href = "/Endangered-Languages-Dictionary/about.en.html#langs";
                 warning_img.src = "/Endangered-Languages-Dictionary/in progress.jpg";
-                resultsContainer.appendChild(warning_img);
+                warning_img_hlink.appendChild(warning_img);
+                resultsContainer.appendChild(warning_img_hlink);
                 resultsContainer.appendChild(document.createElement("br"));
                 resultsContainer.appendChild(document.createTextNode("Dictionary in progress. Apologies."));
             }
