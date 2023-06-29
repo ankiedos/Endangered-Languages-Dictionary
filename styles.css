@@ -36,7 +36,9 @@ div.nav {
 .index-choose-language {
     min-height: 100px;
     min-width: 300px;
-    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div.header {
